@@ -13,6 +13,7 @@
         <a href="#" class="logo">
           <img src="img/logo.svg" alt="logotype" width="60" height="65">
         </a>
+
         <ul class="navigation__list">
           <li class="navigation__item">
             <a href="#" class="navigation__link">Home</a>
@@ -28,6 +29,7 @@
           </li>
         </ul>
       </nav>
+
       <button class="header__mobile-menu-btn" type="button" data-menu-open>
         <svg class="header__mobile-menu-icon" width="32" height="32">
           <use href="img/sprite.svg#menu-mobile"></use>
@@ -45,8 +47,160 @@
           </svg>
         </button>
         
+        <ul class="mobile-menu__navigation">
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Home</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">How it’s made?</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Our products</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Contact</a>
+          </li>
+        </ul>
+
+        <button class="header__buy-btn" type="button">Buy now ></button>
       </div>
     </div>
   </header>
+
+  <main>
+    <section class="promo">
+      <div class="container">
+        <h1 class="visually-hidden">Ice cream shop</h1>
+        <p class="motto">ice cream<br> made with<br> passion</p>
+      </div>
+
+      <button class="promo__btn btn">Products</button>
+      <a href="#" class="promo__link">How it’s made?</a>
+
+      <div class="promo__ice-cream-example">
+        <img src="img/ice-cream-main.png" alt="ice cream example">
+        <p class="pormo__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        </p>
+      </div>
+
+      <ul class="promo-info">
+        <li class="promo-info__item">
+          <p class="promo-info__digit">16</p>
+          <p class="promo-info__title">cafes</p>
+        </li>
+        <li class="promo-info__item">
+          <p class="promo-info__digit">23</p>
+          <p class="promo-info__title">food trucks</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <p class="under-title">100% natural</p>
+        <h2 class="section-title">products</h2>
+
+        <ul class="products__list">
+          <li class="products__item">
+            <img class="porducts__img" src="img/ice-cream-item.png" alt="ice cream">
+            <h3 class="products__title">ice cream</h3>
+            <p class="products__descr">
+              Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer
+            </p>
+            <a href="#" class="products__link">
+              <img src="img/sprite.svg#arrow" width="40" height="16" alt="order goods">
+            </a>
+          </li>
+          <li class="products__item">
+            <img class="porducts__img" src="img/ice-coffee-item.png" alt="ice coffee">
+            <h3 class="products__title">ice coffee</h3>
+            <p class="products__descr">
+              Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers
+            </p>
+            <a href="#" class="products__link">
+              <img src="img/sprite.svg#arrow" width="40" height="16" alt="order goods">
+            </a>
+          </li>
+          <li class="products__item">
+            <img class="porducts__img" src="img/milshakes-item.png" alt="milkshakes">
+            <h3 class="products__title">milkshakes</h3>
+            <p class="products__descr">
+              Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice
+            </p>
+            <a href="#" class="products__link">
+              <img src="img/sprite.svg#arrow" width="40" height="16" alt="order goods">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="made">
+      <div class="container">
+        <div class="process">
+          <img src="img/cow.png" alt="cow">
+          <div class="process__descr">
+            <p>
+              Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts. 
+            </p>
+            <p>
+              We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes. 
+            </p>
+            <p>
+              This is enough to choose ice cream and coffee for any mood!
+            </p>
+            <button class="btn">Read more</button>
+          </div>
+        </div>
+
+        <ul class="achievement">
+          <li class="achievement__item">
+            <div class="achievement__img-thumb">
+              <svg class="achievement__img" width="36" height="36">
+                <use href="img/sprite.svg#cow-icon"></use>
+              </svg>
+            </div>
+            <p class="achievement__digit">721</p>
+            <p class="achievement__descr">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+
+          <li class="achievement__item">
+            <div class="achievement__img-thumb">
+              <svg class="achievement__img" width="36" height="36">
+                <use href="img/sprite.svg#weight-icon"></use>
+              </svg>
+            </div>
+            <p class="achievement__digit">16kg</p>
+            <p class="achievement__descr">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+
+          <li class="achievement__item">
+            <div class="achievement__img-thumb">
+              <svg class="achievement__img" width="36" height="36">
+                <use href="img/sprite.svg#ice-cream-icon"></use>
+              </svg>
+            </div>
+            <p class="achievement__digit">84</p>
+            <p class="achievement__descr">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="slider-feedbacks">
+      <ul class="slider">
+        <li><img src="img/slider-1.jpg" alt="slider 1"></li>
+        <li><img src="img/slider-2.jpg" alt="slider 2"></li>
+        <li><img src="img/slider-3.jpg" alt="slider 3"></li>
+      </ul>
+    </div>
+  </main>
 </body>
 </html>
