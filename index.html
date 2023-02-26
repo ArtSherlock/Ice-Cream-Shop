@@ -12,15 +12,16 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
+      <a href="#" class="logo">
+        <img src="img/logo.svg" alt="logotype" width="60" height="65">
+      </a>
       <nav class="navigation">
-        <a href="#" class="logo">
-          <img src="img/logo.svg" alt="logotype" width="60" height="65">
-        </a>
-
         <ul class="navigation__list">
           <li class="navigation__item">
             <a href="#" class="navigation__link">Home</a>
@@ -43,16 +44,20 @@
         </svg>
       </button>
 
-      <button class="header__buy-btn btn" type="button">Buy now</button>
-    </div>
+      <button class="header__buy-btn btn" type="button" data-modal-buy-open>Buy now</button>
 
-    <div class="mobile-menu" data-menu>
-      <div class="mobile-menu-container">
-        <button class="mobile-menu__close-btn">
-          <svg class="mobile-menu__close-icon" width="32" height="32">
-            <use href="img/sprite.svg#close-icon"></use>
-          </svg>
-        </button>
+<!-- MOBILE MENU MODAL -->
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu--top">
+          <a href="#" class="logo">
+            <img src="img/logo.svg" alt="logotype" width="60" height="65">
+          </a>
+          <button class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="32" height="32">
+              <use href="img/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
         
         <ul class="mobile-menu__navigation">
           <li class="mobile-menu__item">
@@ -68,15 +73,53 @@
             <a href="#" class="mobile-menu__link">Contact</a>
           </li>
         </ul>
-
-        <button class="header__buy-btn btn" type="button">Buy now</button>
+        <button class="header__buy-btn btn" type="button" data-modal-buy-open>Buy now</button>
       </div>
     </div>
+
+<!-- BUY NOW MODAL -->
+    <div class="backdrop" data-modal-buy>
+      <div class="modal buy-now-modal">
+        <button class="mobile-menu__close-btn mobile-menu__close-btn--little" data-model-buy-close>
+          <svg class="mobile-menu__close-icon" width="20" height="20">
+            <use href="img/sprite.svg#close-icon"></use>
+          </svg>
+        </button>
+        <p class="modal__title">Buy now</p>
+        <ul class="buy-now-modal__list">
+          <li class="buy-now-modal__item">
+            <div class="buy-now-modal__accent buy-now-modal__accent--green"></div>
+            <div class="buy-now-modal__border buy-now-modal__border--green"></div>
+            <img src="img/ice-cream-item-modal.png" alt="ice cream">            
+            <p class="buy-now-modal__descr">ice cream</p>
+          </li>
+          <li class="buy-now-modal__item">
+            <div class="buy-now-modal__accent buy-now-modal__accent--yellow"></div>
+            <div class="buy-now-modal__border buy-now-modal__border--yellow"></div>
+            <img src="img/ice-coffee-item-modal.jpg" alt="ice coffee">
+            <p class="buy-now-modal__descr">ice coffee</p>
+          </li>
+          <li class="buy-now-modal__item">
+            <div class="buy-now-modal__accent buy-now-modal__accent--brown"></div>
+            <div class="buy-now-modal__border buy-now-modal__border--brown"></div>
+            <img src="img/milshakes-item-modal.png" alt="milkshake">
+            <p class="buy-now-modal__descr">milkshake</p>
+          </li>
+        </ul>
+        
+        <form class="modal-form" action="javascript:void(0);" method="POST">
+          <input class="modal-form__input" type="text" name="customer-name" placeholder="Name">
+          <input class="modal-form__input" type="tel" name="customer-tel" placeholder="Phone">
+          <textarea class="modal-form__textarea" name="customer-comment" placeholder="Comment"></textarea>
+          <button class="modal-form__submit btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>    
   </header>
 
   <main>
   <!-- PROMO -->
-    <section class="promo">
+    <!-- <section class="promo">
       <div class="container">
         <h1 class="visually-hidden">Ice cream shop</h1>
         <p class="motto">ice cream<br> made with<br> passion</p>
@@ -102,10 +145,10 @@
           <p class="promo-info__title">food trucks</p>
         </li>
       </ul>
-    </section>
+    </section> -->
   
 <!-- PRODUCTS -->
-    <section class="products">
+    <!-- <section class="products">
       <div class="container">
         <p class="under-title">100% natural</p>
         <h2 class="section-title">products</h2>
@@ -143,10 +186,10 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
 <!-- HOW IT'S MADE? -->
-    <section class="made">
+    <!-- <section class="made">
       <div class="container">
         <div class="process">
           <img src="img/cow.png" alt="cow">
@@ -202,10 +245,10 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
 <!-- SLIDER -->
-    <section class="feedbacks">
+    <!-- <section class="feedbacks">
       <div class="container">
         <ul class="slider">
           <li>
@@ -246,10 +289,10 @@
           </li>
         </ul>
       </div>      
-    </section>
+    </section> -->
 
 <!-- BRANCHES -->
-    <section class="branches">
+    <!-- <section class="branches">
       <ul class="branches__list">
         <li class="branches__item">
           <p class="branches__title">cafe</p>
@@ -288,10 +331,10 @@
 
       <button class="btn" type="button">Our Locations</button>
       <button class="btn" type="button">Franchise</button>
-    </section>
+    </section> -->
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <p class="footer__motto">
       homemade ice cream made  <span class="footer__motto--big">with passion</span>
     </p>
@@ -327,37 +370,12 @@
 
     <hr class="footer--line">
     <p class="footer__copywrite">&copy; 2022 - IceCream. All Rights Reserved.</p>
-  </footer>
+  </footer> -->
 
 <!-- MODAL WINDOWS -->
-  <div class="backdrop is-hidden" data-modal>
-    <div class="modal buy-now-modal">
-      <p class="modal__title">Buy now</p>
-      <ul class="buy-now-modal__list">
-        <li class="buy-now-modal__item">
-          <img src="img/ice-cream-item-modal.png" alt="ice cream">
-          <p class="buy-now-modal__descr">ice cream</p>
-        </li>
-        <li class="buy-now-modal__item">
-          <img src="img/ice-coffee-item-modal.jpg" alt="ice coffee">
-          <p class="buy-now-modal__descr">ice coffee</p>
-        </li>
-        <li class="buy-now-modal__item">
-          <img src="img/milshakes-item-modal.png" alt="milkshake">
-          <p class="buy-now-modal__descr">milkshake</p>
-        </li>
-      </ul>
-      
-      <form class="modal-form" action="javascript:void(0);" method="POST">
-        <input class="modal-form__input" type="text" name="customer-name" placeholder="Name">
-        <input class="modal-form__input" type="tel" name="customer-tel" placeholder="Phone">
-        <textarea class="modal-form__textarea" name="customer-comment" placeholder="Comment"></textarea>
-        <button class="modal-form__submit btn" type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
 
-  <div class="backdrop is-hidden">
+
+  <!-- <div class="backdrop is-hidden">
     <div class="modal about-product-modal">
       <p class="modal__title">Chololate icecream</p>
       <img src="img/chololate-icecream-modal.png" alt="Chololate ice cream">
@@ -415,9 +433,9 @@
         <button class="modal-form__submit btn" type="submit">Submit</button>
       </form>
     </div>
-  </div>
+  </div> -->
 
-  <div class="backdrop is-hidden">
+  <!-- <div class="backdrop is-hidden">
     <div class="modal read-more-modal">
       <p class="modal__title">Chololate icecream</p>
       <div class="video-stub">
@@ -427,17 +445,17 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       </p>
     </div>
-  </div>
+  </div> -->
 
-  <div class="backdrop is-hidden">
+  <!-- <div class="backdrop is-hidden">
     <div class="modal our-location-modal">
       <p class="modal__title">Our Locations</p>
       <img class="map" src="img/map.jpg" alt="our location">
       <button class="map-btn btn" type="button">Open map</button>
     </div>
-  </div>
+  </div> -->
 
-  <div class="backdrop is-hidden">
+  <!-- <div class="backdrop is-hidden">
     <div class="modal franchise-modal">
       <p class="modal__title">Thank you for your interest in owning an Ice Cream shop</p>
       <p class="franchise-modal__descr">
@@ -452,9 +470,9 @@
         <button class="modal-form__submit btn" type="submit">Submit</button>
       </form>
     </div>
-  </div>
+  </div> -->
 
   <script src="js/menu.js"></script>
-  <script src="js/modal.js"></script>
+  <script src="js/modal-buy.js"></script>
 </body>
 </html>
