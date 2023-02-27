@@ -1,0 +1,74 @@
+.promo {
+  padding-top: 65px;
+  min-height: 350px;
+
+  background: var(--brand-color);
+}
+
+.motto {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  width: 250px;
+
+  font: 26px/33px 'Seymour One', sans-serif;
+  text-transform: uppercase;
+  color: var(--main-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
+
+  &--bigger {
+    font-size: 34px;
+    line-height: 1;
+  }
+}
+
+.promo__btn {
+  display: inlene-block;
+  min-height: 38px;
+  padding: 10px 26px;
+  margin-right: 12px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 38px;
+
+    &:focus {
+      color: var(--main-color);
+    }
+    
+    &:disabled {
+      border-color: var(--disabled-color);
+    }
+  }
+
+  background: none;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+
+  &:hover,
+  &:focus {
+    border-color: var(--effects-color);
+  }
+}
+
+.promo__link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.promo__ice-cream-example {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.promo-info {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}

@@ -1,4 +1,4 @@
-.btn {  
+.btn {
   border: none;
   padding: 12px 35px;
 
@@ -7,14 +7,14 @@
   line-height: 17px;
   line-height: 0;
 
-  background-color: #F8D24E;
+  background-color: var(--accent-color);
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 250ms linear;
 
   &:hover,
   &:focus {
-    background-color: #0A8817;
+    background-color: var(--effects-color);
   }
 
   &:focus {
@@ -22,7 +22,7 @@
   }
 
   &:disabled {
-    background-color: #ABABAB;
+    background-color: var(--disabled-color);
   }
 }
 
