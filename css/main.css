@@ -529,9 +529,20 @@ p {
 }
 
 .promo {
+  position: relative;
   padding-top: 65px;
-  min-height: 350px;
+  min-height: 500px;
   background: var(--brand-color);
+}
+@media screen and (min-width: 480px) {
+  .promo {
+    min-height: 415px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .promo {
+    min-height: 664px;
+  }
 }
 
 .motto {
@@ -576,9 +587,36 @@ p {
   border-color: var(--effects-color);
 }
 
+.icecream-img {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+}
+@media screen and (min-width: 480px) {
+  .icecream-img {
+    right: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .icecream-img {
+    right: 92px;
+  }
+}
+
 .promo__link {
   color: var(--accent-color);
   text-decoration: underline;
+}
+.promo__link:hover {
+  color: var(--effects-color);
+}
+@media screen and (min-width: 768px) {
+  .promo__link:focus {
+    color: var(--main-color);
+  }
+  .promo__link:disabled {
+    color: var(--disabled-color);
+  }
 }
 
 .promo__ice-cream-example {

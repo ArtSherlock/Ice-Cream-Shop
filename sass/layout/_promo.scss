@@ -1,6 +1,17 @@
 .promo {
+  position: relative;
   padding-top: 65px;
-  min-height: 350px;
+  min-height: 500px;
+
+  @media  screen and (min-width: 480px) {
+    min-height: 415px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-height: 664px;
+  }
+
+
 
   background: var(--brand-color);
 }
@@ -52,9 +63,37 @@
   }
 }
 
+.icecream-img {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+
+  @media screen and (min-width: 480px) {
+    right: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    right: 92px;
+  }
+}
+
 .promo__link {
   color: var(--accent-color);
   text-decoration: underline;
+
+  &:hover {
+    color: var(--effects-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    &:focus {
+      color: var(--main-color);
+    }
+
+    &:disabled {
+      color: var(--disabled-color);
+    }
+  }
 }
 
 .promo__ice-cream-example {
