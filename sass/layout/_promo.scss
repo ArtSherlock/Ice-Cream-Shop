@@ -1,19 +1,33 @@
 .promo {
   position: relative;
   padding-top: 65px;
+  padding-bottom: 12px;
   min-height: 500px;
+
+  background: var(--brand-color) url("../img/dots-mobile.svg") no-repeat 50% 100%;
+
+  @media screen and (width: 480px) {
+    background-position: 100% 100%;
+  }
 
   @media  screen and (min-width: 480px) {
     min-height: 415px;
+    padding-top: 80px;    
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url("../img/dots-tablet.svg");
+    // background-size: 786px;
+    // background-position: 50% 100%;
   }
 
   @media screen and (min-width: 1200px) {
     min-height: 664px;
-  }
+    padding-top: 90px;
 
-
-
-  background: var(--brand-color);
+    background-image: url("../img/dots.svg");
+    // background-size: 1200px;
+  } 
 }
 
 .motto {
@@ -25,10 +39,6 @@
   text-transform: uppercase;
   color: var(--main-color);
 
-  @media screen and (min-width: 1200px) {
-    margin-top: 0;
-  }
-
   &--bigger {
     font-size: 34px;
     line-height: 1;
@@ -36,13 +46,18 @@
 }
 
 .promo__btn {
-  display: inlene-block;
+  display: inline-block;
   min-height: 38px;
-  padding: 10px 26px;
+  padding: 8px 24px;
   margin-right: 12px;
+  margin-bottom: 12px;
+
+  font-weight: 600;
+  font-size: 12px;
 
   @media screen and (min-width: 1200px) {
     margin-right: 38px;
+    margin-bottom: 92px;
 
     &:focus {
       color: var(--main-color);
@@ -69,15 +84,21 @@
   right: 60px;
 
   @media screen and (min-width: 480px) {
-    right: 20px;
+    right: calc(20px + (100% - 480px) / 2);
   }
 
   @media screen and (min-width: 768px) {
-    right: 92px;
+    right: calc(92px + (100% - 768px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    right: calc(92px + (100% - 1200px) / 2);
   }
 }
 
 .promo__link {
+  font-weight: 600;
+  font-size: 12px;
   color: var(--accent-color);
   text-decoration: underline;
 
@@ -99,15 +120,83 @@
 .promo__ice-cream-example {
   display: none;
 
-  @media screen and (min-width: 1200px) {
-    display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
   }
 }
 
+.promo__example-img {
+  margin-right: 32px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 16px;
+  }
+}
+
+.pormo__description {
+  position: relative;
+  width: 150px;
+
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--main-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+
+    display: block;
+    width: 41px;
+    height: 16px;
+    background: url("../img/arrow.svg");
+  }
+}
+
+// PROMO INFO
 .promo-info {
   display: none;
+  position: absolute;
+
+  text-align: right;
+  line-height: 1.25;
 
   @media screen and (min-width: 768px) {
     display: block;
+    top: 94px;
+    right: calc(32px + (100% - 768px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 126px;
+    right: calc(32px + (100% - 1200px) / 2);
+  }
+}
+
+.promo-info__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.promo-info__digit {
+  margin-bottom: 4px;
+
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 46px;
+    line-height: 1.08;
+  }
+}
+
+.promo-info__title {
+  font-size: 8px;
+  color: var(--main-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
   }
 }
