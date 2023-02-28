@@ -134,7 +134,7 @@
         <h1 class="visually-hidden">Ice cream shop</h1>
         <p class="motto">ice cream made with <span class="motto--bigger">passion</span></p>
 
-        <button class="promo__btn">Products</button>
+        <button class="promo__btn" data-modal-ingredients-open>Products</button>
         <a href="#" class="promo__link">How it’s made?</a>
 
         <div class="promo__ice-cream-example">
@@ -167,7 +167,7 @@
         <source srcset="img/ice-cream-mobile-big.png 1x, img/ice-cream-mobile-big@2x.png 2x" media="(min-width: 480px)">
         <source srcset="img/ice-cream-mobile.png 1x, img/ice-cream-mobile@2x.png" media="(max-width: 479px)">
         <img src="img/ice-cream.png" alt="ice cream">
-      </picture>
+      </picture>      
     </section>
   
 <!-- PRODUCTS -->
@@ -397,11 +397,24 @@
 
 <!-- MODAL WINDOWS -->
 
-
-  <!-- <div class="backdrop is-hidden">
+<!-- INGREDIENTS -->
+  <div class="backdrop is-hidden" data-modal-ingredients>
     <div class="modal about-product-modal">
+      <button class="mobile-menu__close-btn mobile-menu__close-btn--little" data-modal-ingredients-close>
+        <svg class="mobile-menu__close-icon" width="20" height="20">
+          <use href="img/sprite.svg#close-icon"></use>
+        </svg>
+      </button>
       <p class="modal__title">Chololate icecream</p>
-      <img src="img/chololate-icecream-modal.png" alt="Chololate ice cream">
+
+      <div class="about-product-modal__img-wrapper">
+        <div class="about-product-modal__accent"></div>
+        <picture>
+          <source srcset="img/chololate-icecream-modal.png 1x, img/chololate-icecream-modal@2x.png 2x">
+          <img src="img/chololate-icecream-modal.png" alt="Chololate ice cream">
+        </picture>
+      </div>
+      
       <ul class="product-content">
         <li class="product-content__item">
           <span class="product-content__item--amount">320</span>
@@ -409,7 +422,7 @@
         </li>
         <li class="product-content__item">
           <span class="product-content__item--amount">4g</span>
-          <span class="product-content__item--descr">Protein...</span>
+          <span class="product-content__item--descr">Prote...</span>
         </li>
         <li class="product-content__item">
           <span class="product-content__item--amount">8.2g</span>
@@ -449,14 +462,14 @@
         </li>
       </ul>
 
-      <form class="modal-form" action="javascript:void(0);" method="POST">
-        <input class="modal-form__input" type="text" name="customer-name" placeholder="Name">
-        <input class="modal-form__input" type="tel" name="customer-tel" placeholder="Phone">
-        <textarea class="modal-form__textarea" name="customer-comment" placeholder="Comment"></textarea>
+      <form class="modal-form ingredients__modal-form" action="javascript:void(0);" method="POST">
+        <input class="modal-form__input" type="text" name="customer-name" placeholder="Name" required>
+        <input class="modal-form__input" type="tel" name="customer-tel" placeholder="Phone" required>
+        <textarea class="modal-form__input modal-form__textarea" name="customer-comment" placeholder="Comment"></textarea>
         <button class="modal-form__submit btn" type="submit">Submit</button>
       </form>
     </div>
-  </div> -->
+  </div>
 
   <!-- <div class="backdrop is-hidden">
     <div class="modal read-more-modal">
@@ -497,5 +510,6 @@
 
   <script src="js/menu.js"></script>
   <script src="js/modal-buy.js"></script>
+  <script src="js/modal-ingredients.js"></script>
 </body>
 </html>

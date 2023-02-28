@@ -124,6 +124,7 @@ p {
 
 .backdrop {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
@@ -173,6 +174,10 @@ p {
   top: 17px;
   right: 20px;
 }
+.mobile-menu__close-btn--little {
+  top: 12px;
+  right: 12px;
+}
 
 .mobile-menu__close-icon {
   fill: #fff;
@@ -220,6 +225,7 @@ p {
 
 .modal {
   position: absolute;
+  z-index: 100;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -251,11 +257,6 @@ p {
   }
 }
 
-.mobile-menu__close-btn--little {
-  top: 12px;
-  right: 12px;
-}
-
 .modal__title {
   font: 16px/1.5 "Seymour One", sans-serif;
   margin-bottom: 20px;
@@ -265,10 +266,6 @@ p {
     font-size: 20px;
     margin-bottom: 40px;
   }
-}
-
-.buy-now-modal {
-  margin-top: 150px;
 }
 
 .buy-now-modal__list {
@@ -363,6 +360,142 @@ p {
           filter: drop-shadow(0px 5px 20px rgba(212, 20, 67, 0.1));
 }
 
+.about-product-modal {
+  padding: 28px 20px;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .about-product-modal {
+    padding: 32px 40px;
+  }
+}
+
+.about-product-modal__img-wrapper {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.about-product-modal__accent {
+  position: absolute;
+  z-index: -1;
+  top: 7px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(156, 190, 143, 0.7)), to(rgba(156, 190, 143, 0.7))), #D9D9D9;
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+  -webkit-box-shadow: 0px 5px 20px rgba(10, 136, 23, 0.25);
+          box-shadow: 0px 5px 20px rgba(10, 136, 23, 0.25);
+}
+
+.product-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .product-content {
+    width: 320px;
+    margin-bottom: 50px;
+  }
+}
+
+.product-content__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 53px;
+  height: 72px;
+  font-size: 10px;
+  border: 2px solid #9CBE8F;
+  border-radius: 40px;
+}
+.product-content__item:not(:last-child) {
+  margin-right: 9px;
+}
+@media screen and (min-width: 768px) {
+  .product-content__item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-content__item {
+    width: 65px;
+    height: 90px;
+    font-size: 12px;
+  }
+}
+
+.product-content__item--amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6px;
+  width: 43px;
+  height: 43px;
+  font-weight: 500;
+  background: #9CBE8F;
+  border: 2px solid #9CBE8F;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+          box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+}
+
+.ingredients__title {
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.ingredients {
+  width: 100%;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .ingredients {
+    margin-bottom: 48px;
+  }
+}
+
+.ingredients__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+}
+.ingredients__item:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.ingredients__modal-form {
+  width: 240px;
+}
+@media screen and (min-width: 768px) {
+  .ingredients__modal-form {
+    width: 376px;
+  }
+}
+
 .modal-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,7 +558,7 @@ p {
 
 .header {
   position: fixed;
-  z-index: 100;
+  z-index: 50;
   width: 100%;
   background-color: var(--brand-color);
 }
@@ -583,6 +716,9 @@ p {
   background: none;
   border: 2px solid var(--accent-color);
   border-radius: 8px;
+  -webkit-transition: border-color 250ms linear;
+  transition: border-color 250ms linear;
+  cursor: pointer;
 }
 @media screen and (min-width: 1200px) {
   .promo__btn {

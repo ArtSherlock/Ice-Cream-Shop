@@ -32,6 +32,11 @@
   position: absolute;
   top: 17px;
   right: 20px;
+
+  &--little {
+    top: 12px;
+    right: 12px;
+  }
 }
 
 .mobile-menu__close-icon {

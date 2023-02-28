@@ -17,8 +17,6 @@
 
   @media screen and (min-width: 768px) {
     background-image: url("../img/dots-tablet.svg");
-    // background-size: 786px;
-    // background-position: 50% 100%;
   }
 
   @media screen and (min-width: 1200px) {
@@ -26,7 +24,6 @@
     padding-top: 90px;
 
     background-image: url("../img/dots.svg");
-    // background-size: 1200px;
   } 
 }
 
@@ -71,6 +68,8 @@
   background: none;
   border: 2px solid var(--accent-color);
   border-radius: 8px;
+  transition: border-color 250ms linear;
+  cursor: pointer;
 
   &:hover,
   &:focus {
