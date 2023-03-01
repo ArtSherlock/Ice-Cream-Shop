@@ -259,8 +259,9 @@ p {
 }
 
 .modal__title {
-  font: 16px/1.5 "Seymour One", sans-serif;
   margin-bottom: 20px;
+  font: 16px/1.5 "Seymour One", sans-serif;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .modal__title {
@@ -555,6 +556,38 @@ p {
   min-height: 42px;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.video-stub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .video-stub {
+    margin-bottom: 32px;
+  }
+}
+
+.read-more-modal__descr {
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .read-more-modal__descr {
+    font-size: 16px;
+  }
 }
 
 .header {
@@ -1099,10 +1132,15 @@ p {
 }
 
 .made {
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 60px;
+  padding-bottom: 80px;
   color: var(--main-color);
   background-color: #84A178;
+}
+@media screen and (min-width: 768px) {
+  .made {
+    padding-bottom: 180px;
+  }
 }
 
 .process,
@@ -1126,6 +1164,24 @@ p {
 @media screen and (min-width: 480px) {
   .process {
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .process {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .process {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -1157,13 +1213,22 @@ p {
   font: 30px/1.25 "Seymour One", sans-serif;
   margin-bottom: 54px;
 }
-
+@media screen and (min-width: 768px) {
+  .made__title {
+    margin-bottom: 80px;
+  }
+}
 .made_img-thumb {
   position: relative;
 }
 @media screen and (max-width: 767px) {
   .made_img-thumb {
     margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .made_img-thumb {
+    margin-right: 110px;
   }
 }
 
@@ -1214,11 +1279,14 @@ p {
   .process__descr {
     padding-left: 0;
     padding-right: 0;
+    width: 336px;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1200px) {
   .process__descr {
     font-size: 16px;
+    width: 463px;
   }
 }
 
@@ -1257,6 +1325,64 @@ p {
   background-image: url("../img/btn-arrow.svg");
 }
 
+.achievement {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .achievement {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .achievement {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.achievement__item {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media screen and (min-width: 480px) {
+  .achievement__item {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .achievement__item {
+    padding-left: 0;
+    padding-right: 0;
+    width: 148px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .achievement__item {
+    width: 300px;
+  }
+}
+
+.achievement__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .achievement__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 .achievement__img-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1285,13 +1411,34 @@ p {
 }
 
 .achievement__digit {
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 36px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .achievement__digit {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .achievement__digit {
+    font-size: 58px;
+  }
 }
 
 .achievement__descr {
   font-size: 12px;
   line-height: 1.7;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .achievement__descr {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .achievement__descr {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -25,7 +25,7 @@
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#header" class="navigation__link">Home</a>
+            <a href="#promo" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item">
             <a href="#made" class="navigation__link">How it’s made?</a>
@@ -34,7 +34,7 @@
             <a href="#products" class="navigation__link">Our products</a>
           </li>
           <li class="navigation__item">
-            <a href="contact" class="navigation__link">Contact</a>
+            <a href="#contact" class="navigation__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -62,7 +62,7 @@
         
         <ul class="mobile-menu__navigation">
           <li class="mobile-menu__item">
-            <a href="#header" class="mobile-menu__link">Home</a>
+            <a href="#promo" class="mobile-menu__link">Home</a>
           </li>
           <li class="mobile-menu__item">
             <a href="#made" class="mobile-menu__link">How it’s made?</a>
@@ -129,7 +129,7 @@
 
   <main>
   <!-- PROMO -->
-    <section class="promo">
+    <section class="promo" id="promo">
       <div class="container">
         <h1 class="visually-hidden">Ice cream shop</h1>
         <p class="motto">ice cream made with <span class="motto--bigger">passion</span></p>
@@ -236,10 +236,11 @@
 
 <!-- HOW IT'S MADE? -->
     <section class="made" id="made">
-      <div class="container ">
+      <div class="container ">        
+        <p class="made__under-title">tradition and love</p>
+        <p class="made__title">how it’s made?</p>
+
         <div class="process">
-          <p class="made__under-title">tradition and love</p>
-          <p class="made__title">how it’s made?</p>
           <div class="made_img-thumb">
             <div class="made__accent"></div>
             <picture class="made__img">
@@ -260,7 +261,7 @@
             <p class="process__descr-text">
               This is enough to choose ice cream and coffee for any mood!
             </p>
-            <button class="process__btn btn">Read more</button>
+            <button class="process__btn btn" data-modal-read-open>Read more</button>
           </div>
         </div>
 
@@ -318,7 +319,7 @@
                 </p>               
               </blockquote>
               <figcaption>Emily, Los Angeles</figcaption>
-            </figure>            
+            </figure>
           </li>
           <li>
             <img class="feedbacks__ice-cream-img" src="img/slider-2.jpg" alt="slider 2">
@@ -505,17 +506,23 @@
     </div>
   </div>
 
-  <!-- <div class="backdrop is-hidden">
+<!-- READ MORE MODAL  -->
+  <div class="backdrop is-hidden-read" data-modal-read>
     <div class="modal read-more-modal">
-      <p class="modal__title">Chololate icecream</p>
+      <button class="mobile-menu__close-btn mobile-menu__close-btn--little" data-modal-read-close>
+        <svg class="mobile-menu__close-icon" width="20" height="20">
+          <use href="img/sprite.svg#close-icon"></use>
+        </svg>
+      </button>
+      <p class="modal__title">How it’s made?</p>
       <div class="video-stub">
-        <img src="img/sprite.svg#player" alt="play button">
+        <img src="img/player.svg" alt="play button">
       </div>
       <p class="read-more-modal__descr">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       </p>
     </div>
-  </div> -->
+  </div>
 
   <!-- <div class="backdrop is-hidden">
     <div class="modal our-location-modal">
@@ -543,6 +550,7 @@
   </div> -->
 
   <script src="js/menu.js"></script>
+  <script src="js/modal-read.js"></script>
   <script src="js/modal-buy.js"></script>
   <script src="js/modal-ingredients.js"></script>
 </body>

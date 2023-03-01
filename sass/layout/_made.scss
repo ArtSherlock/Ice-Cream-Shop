@@ -1,10 +1,13 @@
 .made {
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 60px;
+  padding-bottom: 80px;
 
   color: var(--main-color);
-
   background-color: #84A178;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 180px;
+  }
 }
 
 .process,
@@ -20,6 +23,15 @@
 
   @media screen and (min-width: 480px) {
     margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
   }
 }
 
@@ -49,6 +61,14 @@
 .made__title {
   font: 30px/1.25 'Seymour One', sans-serif;
   margin-bottom: 54px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    
+  }
 }
 
 .made_img-thumb {
@@ -56,7 +76,11 @@
 
   @media screen and (max-width: 767px) {
     margin-bottom: 40px;
-  }  
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 110px;
+  }
 }
 
 .made__img {
@@ -103,10 +127,14 @@
   @media screen and (min-width: 768px) {
     padding-left: 0;
     padding-right: 0;
+    width: 336px;
+
+    text-align: left;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 16px;
+    width: 463px;
   }
 }
 
@@ -144,9 +172,50 @@
   }
 }
 
+
 // ACHIEVMENT LIST
+.achievement {
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .achievement__item {
-  
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media screen and (min-width: 480px) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 148px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 300px;
+  }
+}
+
+.achievement__item:not(:last-child) {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .achievement__img-thumb {
@@ -171,13 +240,31 @@
 }
 
 .achievement__digit {
+  margin-bottom: 16px;
+
   font-weight: 700;
   font-size: 36px;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+  }
 }
 
 .achievement__descr {
   font-size: 12px;
   line-height: 1.7;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
