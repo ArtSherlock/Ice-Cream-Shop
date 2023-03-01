@@ -1,0 +1,211 @@
+.products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  overflow: hidden;
+  background-image: url("../img/ice-cream-bg-mobile.jpg");
+  background-position: 100%  50%;
+
+  @media screen and (min-width: 768px) {
+    background-image: url("../img/ice-cream-bg-tablet.jpg");
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url("../img/ice-cream-bg.jpg");
+  }
+}
+
+.under-title {
+  margin-bottom: 12px;
+
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
+}
+
+.section-title {
+  margin-bottom: 40px;
+
+  font: 30px/1.27 'Seymour One', sans-serif;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 80px;
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 120px;
+    font-size: 36px;
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
+  
+}
+
+.products__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  max-width: 320px;
+
+  @media screen and (min-width: 768px) {
+    width: 224px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.product-item__wrapper {
+  padding: 123px 40px 16px;
+  min-height: 420px;
+  margin-top: -106px;
+
+  // z-index: 0;  
+  border-radius: 24px;
+
+  @media screen and (min-width: 480px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 428px;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-height: 536px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  &--green {
+    background-color: #AEC6A5;
+  }
+
+  &--yellow {
+    background-color: #EFD478;
+  }
+
+  &--brown {
+    background-color: #D6936D;;
+  }
+}
+
+.products__title {
+  margin-bottom: 40px;
+
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 66px;
+    font-size: 30px;
+  }
+}
+
+.products__descr {
+  position: relative;
+  font-size: 14px;
+  line-height: 25px;  
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  &::after {    
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 182px;
+
+    display: block;
+    width: 41px;
+    height: 16px;
+    background: url("../img/arrow.svg");
+
+    @media screen and (min-width: 768px) {
+      top: 190px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 250px;
+    }
+  }
+}
+
+.products__img-thumb {
+  position: relative;
+  z-index: 10;
+  width: 200px;
+
+  @media screen and (min-width: 1200px) {
+    width: 302px;
+  }
+}
+
+.products__accent {
+  position: absolute;
+  z-index: -1;
+  top: 12px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  @media screen and (min-width: 1200px) {
+    top: 16px;
+    width: 302px;
+    height: 302px;
+  }
+
+  &--green {
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+    box-shadow: 0px 5px 20px rgba(10, 136, 23, 0.25);
+  }
+
+  &--yellow {
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    box-shadow: 0px 5px 20px rgba(153, 114, 23, 0.25);
+  }
+
+  &--brown {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  }
+}

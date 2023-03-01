@@ -79,7 +79,7 @@
     </div>
 
 <!-- BUY NOW MODAL -->
-    <div class="backdrop is-hidden" data-modal-buy>
+    <div class="backdrop is-hidden-buy" data-modal-buy>
       <div class="modal buy-now-modal">
         <button class="mobile-menu__close-btn mobile-menu__close-btn--little" data-modal-buy-close>
           <svg class="mobile-menu__close-icon" width="20" height="20">
@@ -171,62 +171,96 @@
     </section>
   
 <!-- PRODUCTS -->
-    <!-- <section class="products" id="products">
+    <section class="products" id="products">
       <div class="container">
         <p class="under-title">100% natural</p>
         <h2 class="section-title">products</h2>
 
         <ul class="products__list">
           <li class="products__item">
-            <img class="porducts__img" src="img/ice-cream-item.png" alt="ice cream">
-            <h3 class="products__title">ice cream</h3>
-            <p class="products__descr">
-              Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer
-            </p>
-            <a href="#" class="products__link">
-              <img src="img/sprite.svg#arrow" width="40" height="16" alt="order goods">
-            </a>
+            <div class="products__img-thumb">
+              <div class="products__accent products__accent--green"></div>
+              <pictures>
+                <source srcset="img/ice-cream-item.png 1x, img/ice-cream-item@2x 2x" media="(min-width: 1200px)">
+                <source srcset="img/ice-cream-item-mobile.png 1x, img/ice-cream-item-mobile@2x 2x" media="(min-width: 768px)">
+                <img class="porducts__img" src="img/ice-cream-item.png" alt="ice cream">
+              </pictures>
+            </div>
+
+            <div class="product-item__wrapper product-item__wrapper--green">
+              <h3 class="products__title">ice cream</h3>
+              <p class="products__descr">
+                Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer
+              </p>
+            </div>
           </li>
+
           <li class="products__item">
-            <img class="porducts__img" src="img/ice-coffee-item.png" alt="ice coffee">
-            <h3 class="products__title">ice coffee</h3>
-            <p class="products__descr">
-              Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers
-            </p>
-            <a href="#" class="products__link">
-              <img src="img/sprite.svg#arrow" width="40" height="16" alt="order goods">
-            </a>
+            <div class="products__img-thumb">
+              <div class="products__accent products__accent--yellow"></div>
+              <pictures>
+                <source srcset="img/ice-coffee-item.png 1x, img/ice-coffee-item@2x 2x" media="(min-width: 1200px)">
+                <source srcset="img/ice-coffee-item-mobile.png 1x, img/ice-coffee-item-mobile@2x 2x" media="(min-width: 768px)">
+                <img class="porducts__img" src="img/ice-coffee-item.png" alt="ice coffee">
+              </pictures>
+            </div>
+                     
+            <div class="product-item__wrapper product-item__wrapper--yellow">
+              <h3 class="products__title">ice coffee</h3>
+              <p class="products__descr">
+                Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers
+              </p>
+            </div>
           </li>
+
           <li class="products__item">
-            <img class="porducts__img" src="img/milshakes-item.png" alt="milkshakes">
-            <h3 class="products__title">milkshakes</h3>
-            <p class="products__descr">
-              Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice
-            </p>
-            <a href="#" class="products__link">
-              <img src="img/sprite.svg#arrow" width="40" height="16" alt="order goods">
-            </a>
+            <div class="products__img-thumb">
+              <div class="products__accent products__accent--brown"></div>
+              <pictures>
+                <source srcset="img/milshakes-item.png 1x, img/milshakes-item@2x 2x" media="(min-width: 1200px)">
+                <source srcset="img/milshakes-item-mobile.png 1x, img/milshakes-item-mobile@2x 2x" media="(min-width: 768px)">
+                <img class="porducts__img" src="img/milshakes-item.png" alt="milkshakes">
+              </pictures>
+            </div>
+
+            <div class="product-item__wrapper product-item__wrapper--brown">
+              <h3 class="products__title">milkshakes</h3>
+              <p class="products__descr">
+                Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice
+              </p>
+            </div>
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
 
 <!-- HOW IT'S MADE? -->
-    <!-- <section class="made" id="made">
-      <div class="container">
+    <section class="made" id="made">
+      <div class="container ">
         <div class="process">
-          <img src="img/cow.png" alt="cow">
+          <p class="made__under-title">tradition and love</p>
+          <p class="made__title">how it’s made?</p>
+          <div class="made_img-thumb">
+            <div class="made__accent"></div>
+            <picture class="made__img">
+              <source srcset="img/cow.png 1x, img/cow@2x.png 2x" media="(min-width: 1200px)">
+              <source srcset="img/cow-tablet.png 1x, img/cow-tablet@2x.png 2x" media="(min-width: 768px)">
+              <source srcset="img/cow-mobile.png 1x, img/cow-mobile@2x.png 2x" media="(min-width: 480px)">
+              <img src="img/cow.png" alt="cow">
+            </picture>            
+          </div>
+         
           <div class="process__descr">
-            <p>
+            <p class="process__descr-text">
               Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts. 
             </p>
-            <p>
+            <p class="process__descr-text">
               We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes. 
             </p>
-            <p>
+            <p class="process__descr-text">
               This is enough to choose ice cream and coffee for any mood!
             </p>
-            <button class="btn">Read more</button>
+            <button class="process__btn btn">Read more</button>
           </div>
         </div>
 
@@ -268,7 +302,7 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
 
 <!-- SLIDER -->
     <!-- <section class="feedbacks">
@@ -398,7 +432,7 @@
 <!-- MODAL WINDOWS -->
 
 <!-- INGREDIENTS -->
-  <div class="backdrop is-hidden" data-modal-ingredients>
+  <div class="backdrop is-hidden-ingredients" data-modal-ingredients>
     <div class="modal about-product-modal">
       <button class="mobile-menu__close-btn mobile-menu__close-btn--little" data-modal-ingredients-close>
         <svg class="mobile-menu__close-icon" width="20" height="20">
