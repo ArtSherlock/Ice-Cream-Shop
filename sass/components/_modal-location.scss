@@ -1,0 +1,13 @@
+.map {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.map-btn {
+  width: 145px;
+  height: 42px;
+  padding: 12px 34px;
+}

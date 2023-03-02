@@ -5,7 +5,6 @@
 @import 'base/common';
 
 @import 'components/btn';
-// @import 'components/social-list';
 @import 'components/logo';
 @import 'components/backdrop';
 @import 'components/mobile-menu';
@@ -14,10 +13,13 @@
 @import 'components/about-product-modal';
 @import 'components/modal-form';
 @import 'components/modal-read-more';
+@import 'components/modal-location';
+@import 'components/franchise-modal';
 
 @import 'layout/header';
 @import 'layout/promo';
 @import 'layout/products';
 @import 'layout/made';
-// @import 'layout/what-we-do';
-// @import 'layout/footer';
+@import 'layout/feedbacks';
+@import 'layout/branches';
+@import 'layout/footer';

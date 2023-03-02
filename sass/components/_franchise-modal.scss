@@ -1,0 +1,18 @@
+.franchise-modal__descr {
+  margin-bottom: 24px;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.modal__title--franchise {
+  margin-right: -5x;
+  margin-left: -5px;
+
+  @media screen and (min-width: 678px) {
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+}
