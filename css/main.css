@@ -631,6 +631,35 @@ p {
   }
 }
 
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+.slick-dots li {
+  height: 0;
+}
+.slick-dots li:not(:last-child) {
+  margin-right: 18px;
+}
+.slick-dots button {
+  height: 12px;
+  width: 12px;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.slick-active button {
+  background-color: #84A178;
+}
+
 .header {
   position: fixed;
   z-index: 50;
@@ -1178,11 +1207,6 @@ p {
   color: var(--main-color);
   background-color: #84A178;
 }
-@media screen and (min-width: 768px) {
-  .made {
-    padding-bottom: 180px;
-  }
-}
 
 .process,
 .achievement,
@@ -1499,11 +1523,11 @@ p {
 @media screen and (min-width: 1200px) {
   .feedbacks {
     padding-bottom: 220px;
-    background-image: url("../img/ice-cream-bg.jpg");
+    background-image: green top 120px, url("../img/ice-cream-bg.jpg");
   }
 }
 
-.feedback__wrapper {
+.slick-slide.feedback__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1517,13 +1541,8 @@ p {
 }
 
 .feedback__ice-cream-img {
-  margin-top: -35px;
+  margin-top: 80px;
   margin-bottom: 80px;
-}
-@media screen and (min-width: 480px) {
-  .feedback__ice-cream-img {
-    margin-top: -50px;
-  }
 }
 @media screen and (min-width: 768px) {
   .feedback__ice-cream-img {
@@ -1532,7 +1551,6 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .feedback__ice-cream-img {
-    margin-top: -100px;
     margin-bottom: 140px;
   }
 }

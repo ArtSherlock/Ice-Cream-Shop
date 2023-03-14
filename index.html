@@ -14,6 +14,7 @@
     referrerpolicy="no-referrer"
   />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
@@ -307,26 +308,66 @@
 
 <!-- FEEDBACK -->
     <section class="feedbacks">
-      <div class="container feedback__wrapper">
-        <picture class="feedback__ice-cream-img">
-          <source srcset="img/slider-1.png 1x, img/slider-1@2x.png 2x" media="(min-width: 1200px)">
-          <source srcset="img/slider-1-tablet.png 1x, img/slider-1-tablet@2x.png 2x" media="(min-width: 768px)">
-          <source src="img/slider-1-mobile.png 1x, img/slider-1-mobile@2x.png 2x" media="(min-width: 480px)">
-          <source src="img/slider-1-mobile-min.png 1x, img/slider-1-mobile-min@2x.png 2x" media="(min-width: 320px)">
-          <img srcset="img/slider-1.png" alt="slider ice cream image">
-        </picture>
-        <picture class="feedbacks__person-img">
-          <source srcset="img/person-1.png 1x, img/person-1@2x.png 2x">
-          <img src="img/person-1.png" alt="person giving feedback">
-        </picture>            
-        <figure class="feedbacks__block">
-          <blockquote class="feedbacks__text">
-            <p>
-                I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.
-            </p>               
-          </blockquote>
-          <figcaption class="feedbacks__person-info">Emily, Los Angeles</figcaption>
-        </figure>
+      <div class="container feedback__slider">
+        <div class="feedback__wrapper">
+          <picture class="feedback__ice-cream-img">
+            <source srcset="img/slider-1.png 1x, img/slider-1@2x.png 2x" media="(min-width: 1200px)">
+            <source srcset="img/slider-1-tablet.png 1x, img/slider-1-tablet@2x.png 2x" media="(min-width: 768px)">
+            <source src="img/slider-1-mobile.png 1x, img/slider-1-mobile@2x.png 2x" media="(min-width: 480px)">
+            <source src="img/slider-1-mobile-min.png 1x, img/slider-1-mobile-min@2x.png 2x" media="(min-width: 320px)">
+            <img srcset="img/slider-1.png" alt="slider ice cream image">
+          </picture>
+          <picture class="feedbacks__person-img">
+            <source srcset="img/person-1.png 1x, img/person-1@2x.png 2x">
+            <img src="img/person-1.png" alt="person giving feedback">
+          </picture>
+          <figure class="feedbacks__block">
+            <blockquote class="feedbacks__text">
+              <p>
+                  I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.
+              </p>
+            </blockquote>
+            <figcaption class="feedbacks__person-info">Emily, Los Angeles</figcaption>
+          </figure>
+        </div>
+
+        <div class="feedback__wrapper">
+          <picture class="feedback__ice-cream-img">
+            <source srcset="img/slider-2.png 1x, img/slider-2@2x.png 2x" media="(min-width: 1200px)">
+            <img srcset="img/slider-2.png" alt="slider ice cream image">
+          </picture>
+          <picture class="feedbacks__person-img">
+            <source srcset="img/person-2.png 1x, img/person-2@2x.png 2x">
+            <img src="img/person-2.png" alt="person giving feedback">
+          </picture>
+          <figure class="feedbacks__block">
+            <blockquote class="feedbacks__text">
+              <p>
+                  Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!
+              </p>
+            </blockquote>
+            <figcaption class="feedbacks__person-info">Bryan, New-York</figcaption>
+          </figure>
+        </div>
+
+        <div class="feedback__wrapper">
+          <picture class="feedback__ice-cream-img">
+            <source srcset="img/slider-3.png 1x, img/slider-3@2x.png 2x" media="(min-width: 1200px)">
+            <img srcset="img/slider-3.png" alt="slider ice cream image">
+          </picture>
+          <picture class="feedbacks__person-img">
+            <source srcset="img/person-3.png 1x, img/person-3@2x.png 2x">
+            <img src="img/person-1.png" alt="person giving feedback">
+          </picture>
+          <figure class="feedbacks__block">
+            <blockquote class="feedbacks__text">
+              <p>
+                  Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!
+              </p>
+            </blockquote>
+            <figcaption class="feedbacks__person-info">Ashley, San Francisco</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -563,5 +604,10 @@
   <script src="js/modal-franchise.js"></script>
   <script src="js/modal-read.js"></script> 
   <script src="js/modal-ingredients.js"></script>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
